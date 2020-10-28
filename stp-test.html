@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const key = "6ff8b372bdd0ca37da830f278129a7bf";
+      const search = `http://api.sierratradingpost.com/api/1.0/products/search~columbia-jackets/?api_key=${key}`;
+      const products = `http://api.sierratradingpost.com/api/1.0/products/?page=2&perpage=100&sort=SearchRanking&api_key=${key}`;
+      // http://api.sierratradingpost.com/api/1.0/product/12TGM/?api_key=6ff8b372bdd0ca37da830f278129a7b
+      fetch(search)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
+      fetch(products)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- http://byui-cit.github.io/cit261/examples/arrays.html -->
+  <head>
+    <meta charset="utf-8" />
+    <title>Fun with Arrays</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+
+  <body>
+    <main></main>
+    <script>
+      //open your editor and create an array of colors...5 or so should do it.
+      const color = "red";
+
+      function doSomething() {
+        var one = "one";
+        if (one) {
+          const two = "two";
+          var three = "three";
+        }
+        console.log(one);
+        //console.log(two);
+        console.log(three);
+      }
+      doSomething();
+      const colors = ["red", "blue", "green", "yellow", "orange"];
+      const adjectives = [
+        "bold",
+        "shy",
+        "strong",
+        "lazy",
+        "round",
+        "flat",
+        "old"
+      ];
+      const nouns = [
+        "bike",
+        "cat",
+        "plate",
+        "computer",
+        "student",
+        "car",
+        "house"
+      ];
+      const numbers = [1, 4, 7, 34, 54, 243, 67, 89, 21, 12345];
+
+      const ships = [
+        {
+          name: "Executor",
+          model: "Executor-class star dreadnought",
+          manufacturer: "Kuat Drive Yards, Fondor Shipyards",
+          cost_in_credits: "1143350000",
+          length: "19000",
+          starship_class: "Star dreadnought",
+          url: "http://swapi.dev/api/starships/15/"
+        },
+        {
+          name: "Death Star",
+          model: "DS-1 Orbital Battle Station",
+          manufacturer:
+            "Imperial Department of Military Research, Sienar Fleet Systems",
+          cost_in_credits: "1000000000000",
+          length: "120000",
+          starship_class: "Deep Space Mobile Battlestation",
+          url: "http://swapi.dev/api/starships/9/"
+        },
+        {
+          name: "Millennium Falcon",
+          model: "YT-1300 light freighter",
+          manufacturer: "Corellian Engineering Corporation",
+          cost_in_credits: "100000",
+          length: "34.37",
+          starship_class: "Light freighter",
+          url: "http://swapi.dev/api/starships/10/"
+        },
+        {
+          name: "X-wing",
+          model: "T-65 X-wing",
+          manufacturer: "Incom Corporation",
+          cost_in_credits: "149999",
+          length: "12.5",
+          starship_class: "Starfighter",
+          url: "http://swapi.dev/api/starships/12/"
+        }
+      ];
+
+      //example of for loop to traverse array
+      for (let i = 0; i < colors.length; i++) {
+        console.log(colors[i]);
+      }
+
+      //what can we do with an array: console.dir()
+      console.dir(colors);
+      // forEach
+      function log(message, index) {
+        console.log(index, message);
+      }
+      colors.forEach(log);
+
+      colors.forEach(function (item) {
+        console.log(item);
+      });
+      //example of map: negative numbers
+      function negative(num) {
+        return num * -1;
+      }
+      const negative2 = function (num) {
+        return num * -1;
+      };
+      const negative3 = (num) => num * -1;
+
+      negative(3);
+      negative2(3);
+      //example of map with arrow function declaration
+      const negNumbers = numbers.map(function (num) {
+        return num * -1;
+      });
+      //filter example with indexOf to do a substring search
+
+      //random number generation
+
+      console.log(Math.floor(Math.random() * 14) + 21);
+      function rand(range, offset) {
+        return Math.floor(Math.random() * range) + offset;
+      }
+      //random numbers: write a function that will return a random number in a range from 0 -> num-1
+
+      // closures: random dice...
+
+      //random numbers write a function that will return a random number in a range specified
+
+      // write a function to build a random sentence seeded from 3 arrays (color, adj, noun)
+    </script>
+  </body>
+</html>
